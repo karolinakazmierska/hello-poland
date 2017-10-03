@@ -21,8 +21,9 @@ $grey: rgb(54,54,54);
 }
 
 .blog {
-    height: 350px;
+    // height: 350px;
     width: 350px;
+    height: auto;
     margin: 16px;
     border: 1px solid blue;
     border: none;
@@ -60,7 +61,7 @@ $grey: rgb(54,54,54);
 .blog-name {
     display: block;
     color: $grey;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     margin: 5px 0;
 }

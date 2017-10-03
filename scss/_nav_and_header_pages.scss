@@ -1,12 +1,13 @@
 $red: rgb(208,0,0);
 $grey: rgb(54,54,54);
 
-/*---------MAIN-HEADER & MAIN-NAV----------*/
+/*---------PAGES HEADER & NAV----------*/
 
-.main-header {
+.pages-header {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(black, 0.2) 0%, rgba(black, 0.05) 100% ), url(../images/warsaw_starowka.jpg);
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(black, 0.2) 0%, rgba(black, 0.05) 100% );
+    background-color: #81a1fc;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +29,7 @@ $grey: rgb(54,54,54);
     vertical-align: middle;
     justify-content: space-between;
     padding: 10px;
+    position: relative;
 }
 
 .main-nav-logo {
@@ -37,6 +39,9 @@ $grey: rgb(54,54,54);
 .main-nav-menu {
     margin: 50px 0;
     z-index: 1;
+    ul {
+        text-align: right;
+    }
     li {
         display: inline-block;
         transition: 1s all;
@@ -55,6 +60,56 @@ $grey: rgb(54,54,54);
     }
 }
 
+/* -- HAMBURGER -- */
+
+.main-nav-menu-hamburger {
+    display: none;
+    align-self: baseline;
+    margin-top: 20px;
+    margin-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    span {
+        display: block;
+        width: 50px;
+        height: 8px;
+        margin-bottom: 8px;
+        background: white;
+        border-radius: 3px;
+    }
+}
+
+.main-nav-menu-hamburger-items {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    a {
+        display: block;
+        background-color: rgba(255,255,255,0.9);
+        font-size: 20px;
+        color: $red;
+        line-height: 3em;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.7s, color 0.7s;
+        &:hover {
+            background-color: $red;
+            color: white;
+        }
+        &:active {
+            background-color: $red;
+            color: white;
+        }
+    }
+
+}
+
 .main-header-title {
     z-index: 1;
     display: flex;
@@ -67,6 +122,7 @@ $grey: rgb(54,54,54);
         color: $red;
         text-shadow: 1px 1px #000000;
         height: 1.5em;
+        display: block;
         #hello {
             font-weight: bold;
             color: white;
@@ -78,6 +134,8 @@ $grey: rgb(54,54,54);
         }
     }
     h2 {
+        display: block;
+        width: 100%;
         font-size: 40px;
         color: white;
         text-shadow: 1px 1px #000000;
