@@ -1,0 +1,35 @@
+$red: rgb(208,0,0);
+$grey: rgb(54,54,54);
+
+/*--------MAIN-COOPERATION---------*/
+
+.main-cooperation {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.4) 100% ), url(../images/cracow_church.jpg);
+    background-attachment: fixed; // parallax scrolling
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+        color: white;
+    }
+}
+
+/* -- MEDIA -- */
+
+@media screen and (max-width: 768px)  {
+    .main-cooperation {
+        background-attachment: local; // removing parallax scrolling
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .main-cooperation {
+        background-attachment: local; // removing parallax scrolling
+    }
+}

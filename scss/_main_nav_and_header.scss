@@ -7,10 +7,14 @@ $grey: rgb(54,54,54);
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(black, 0.2) 0%, rgba(black, 0.05) 100% ), url(../images/warsaw_starowka.jpg);
+    // background-attachment: fixed; // parallax, przeniesiony do media queries
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    .container {
+        // margin-top: 10%;
+    }
 }
 
 .main-header-cover {
@@ -109,11 +113,14 @@ $grey: rgb(54,54,54);
 
 }
 
+/* -- HELLO POLAND & H2 -- */
+
 .main-header-title {
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    // border: 1px solid blue;
     h1 {
         font-size: 80px;
         text-transform: uppercase;
@@ -123,8 +130,18 @@ $grey: rgb(54,54,54);
         height: 1.5em;
         display: block;
         #hello {
+            font-size: 70px;
             font-weight: bold;
             color: white;
+            text-align: center;
+            width: 0px;
+            height: 1.5em;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #poland {
+            font-weight: bold;
+            font-size: 70px;
             text-align: center;
             width: 0px;
             height: 1.5em;
@@ -135,7 +152,7 @@ $grey: rgb(54,54,54);
     h2 {
         display: block;
         width: 100%;
-        font-size: 40px;
+        font-size: 30px;
         color: white;
         text-shadow: 1px 1px #000000;
         text-align: center;
@@ -163,5 +180,45 @@ $grey: rgb(54,54,54);
         img {
             height: 70px;
         }
+    }
+}
+
+/* -- MEDIA -- */
+
+@media screen and (min-width: 1025px)  and (orientation: landscape) {
+    .main-header {
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 999px) and (orientation: landscape) {
+    .main-header {
+        background-attachment: fixed;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-header {
+        background-attachment: local;
+    }
+    .main-header-title h1 #hello,
+    .main-header-title h1 #poland {
+        font-size: 50px;
+        line-height: 1.5em;
+    }
+    .main-header-title h2 {
+        font-size: 25px;
+        margin-top: 1em;
+    }
+    .main-nav-menu {
+        display: none;
+    }
+    .main-nav-menu-hamburger {
+        display: block;
+    }
+    .main-nav-logo {
+        width: 200px;
     }
 }

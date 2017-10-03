@@ -1,9 +1,9 @@
 $( document ).ready(function() {
 
 
-// CHANGING WORDS IN HEADER
+// CHANGING HELLO WORDS IN HEADER
 
-var words = ["HELLO", "CZEŚĆ", "HOLA", "BONJOUR", "OLÁ", "ПРИВЕТ"];
+var words = ["HELLO", "CZEŚĆ", "HOLA", "BONJOUR", "BUNA", "OLÁ", "ПРИВЕТ"];
 
 function changeWord(arr) {
     for (var i=0; i<arr.length; i++) {
@@ -37,9 +37,54 @@ $(window).bind("load", function() {
     }, 3500);
 });
 
+// CHANGING COUNTRY NAMES IN HEADER
+
+var countries = ["POLAND", "POLSKO", "POLONIA", "POLOGNE", "POLONIA!", "POLÔNIA", "ПОЛЬША"];
+
+function changeCountry(arr) {
+    for (var i=0; i<arr.length; i++) {
+        var poland = document.querySelector("#poland");
+        var newCountry;
+        if (poland.innerText === arr[i] && i<arr.length-1) {
+            newCountry = arr[i+1];
+            break;
+        } else if (poland.innerText === arr[i] && i === arr.length-1) {
+            newCountry = arr[0];
+        }
+    }
+    poland.innerText = newCountry;
+    // console.log("do animowania:", hello)
+    animateCountry(poland);
+    return poland.innerText;
+}
+
+function animateCountry(country) {
+    var poland = country;
+    var theWidth = "100%";
+    $(poland).css("overflow", "hidden");
+    $(poland).css("width", "0");
+    return $(poland).animate( { width: theWidth }, 800 );
+}
+
+$(window).bind("load", function() {
+    setInterval(function() {
+        changeCountry(countries);
+    }, 3500);
+});
 
 
+// SCROLLING
 
+$("#arrow-down").on("click", function(event) {
+    // document.querySelector('#about').scrollIntoView({
+    // 	behavior: 'smooth'
+    // });
+    window.scrollBy({
+        top: 800,
+        left: 0,
+        behavior: 'smooth'
+});
+})
 
 
 

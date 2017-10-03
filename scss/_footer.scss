@@ -11,10 +11,12 @@ $grey: rgb(54,54,54);
     color: white;
     .row {
         justify-content: space-between;
+        flex-direction: row;
     }
     a {
         text-decoration: none;
         color: white;
+        text-align: left;
         line-height: 2em;
         // transition: 2s all; // nie działa
         &:hover {
@@ -28,4 +30,24 @@ $grey: rgb(54,54,54);
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+/* -- MEDIA -- */
+
+@media screen and (max-width: 768px) {
+    .main-footer {
+        .row {
+            flex-direction: column;
+        }
+        a {
+            display: block;
+            text-align: center;
+        }
+        #copyright {
+            align-items: center;
+        }
+        .col-1-2 {
+            width: 100%;
+        }
+    }
 }
