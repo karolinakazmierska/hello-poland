@@ -1,0 +1,110 @@
+$red: rgb(208,0,0);
+$grey: rgb(54,54,54);
+
+/*---------MAIN-HEADER & MAIN-NAV----------*/
+
+.main-header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(black, 0.2) 0%, rgba(black, 0.05) 100% ), url(../images/warsaw_starowka.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main-header-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.main-nav-logo {
+    z-index: 1;
+}
+
+.main-nav-menu {
+    margin: 50px 0;
+    z-index: 1;
+    li {
+        display: inline-block;
+        transition: 1s all;
+        height: 3em;
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            padding: 0 20px;
+            text-shadow: 1px 1px #000000;
+        }
+        &:hover {
+            // text-decoration: underline;
+            border-bottom: 2px solid white;
+        }
+    }
+}
+
+.main-header-title {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-size: 80px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $red;
+        text-shadow: 1px 1px #000000;
+        height: 1.5em;
+        #hello {
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            width: 0px;
+            height: 1.5em;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    h2 {
+        font-size: 40px;
+        color: white;
+        text-shadow: 1px 1px #000000;
+        text-align: center;
+    }
+}
+
+#arrow-down {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: 0.7s all;
+    img {
+        z-index: 1;
+        transition: 0.7s all;
+    }
+    &:hover {
+        height: 70px;
+        width: 70px;
+        img {
+            height: 70px;
+        }
+    }
+}

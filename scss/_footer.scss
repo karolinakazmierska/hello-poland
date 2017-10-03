@@ -1,0 +1,35 @@
+$red: rgb(208,0,0);
+$grey: rgb(54,54,54);
+
+/*--------MAIN-FOOTER---------*/
+
+.main-footer {
+    height: auto;
+    width: 100%;
+    background-color: $red;
+    display: flex;
+    color: white;
+    .row {
+        justify-content: space-between;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        line-height: 2em;
+        // transition: 2s all; // nie działa
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.col-1-2 {
+
+}
+
+#copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}

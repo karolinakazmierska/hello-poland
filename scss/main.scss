@@ -1,0 +1,188 @@
+@import "_reset";
+@import "_nav and header";
+@import "_bloggers";
+@import "_footer";
+
+/*---------------------------*/
+/*--------GENERAL------------*/
+/*---------------------------*/
+* {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+$red: rgb(208,0,0);
+$grey: rgb(54,54,54);
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-around;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.col-1-2 {
+    width: 50%;
+    padding: 10px;
+}
+
+h3 {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: white;
+    font-size: 24px;
+}
+
+h4 {
+    color: $grey;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    .dot {
+        color: $red;
+        font-size: 70px;
+    }
+}
+
+.main-btn {
+    display: inline-block;
+    line-height: 2em;
+    padding: 10px 20px;
+    color: $red;
+    font-weight: bold;
+    background-color: white;
+    font-size: 20px;
+    border: 4px solid $red;
+    border-radius: 50px;
+    transition: 0.3s all;
+}
+
+.main-btn:hover {
+    color: white;
+    background-color: $red;
+    // border: 4px solid white;
+}
+
+.main-btn-oncolor {
+    display: inline-block;
+    line-height: 2em;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color: Transparent;
+    font-size: 20px;
+    border: 4px solid white;
+    border-radius: 50px;
+    transition: 0.3s all;
+}
+
+.main-btn-oncolor:hover {
+    color: $red;
+    background-color: white;
+    // border: 4px solid white;
+}
+
+
+/*---------MAIN-ABOUT----------*/
+
+.main-about {
+    width: 100%;
+    height: 300px;
+    background-color: $red;
+    .container {
+        height: 100%;
+
+    }
+}
+
+
+
+/*--------MAIN-MAP---------*/
+.main-map {
+    width: 100%;
+    height: 700px;
+    .container {
+        height: 100%;
+    }
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+    background: url(../images/world_map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+
+/*--------MAIN-COOPERATION---------*/
+
+.main-cooperation {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.4) 100% ), url(../images/cracow_church.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+        color: white;
+    }
+}
+
+
+/*--------MOBILE---------*/
+
+
+@media screen and (max-width: 999px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    // .blog {
+    //     margin: 10px 0;
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------END---------*/
