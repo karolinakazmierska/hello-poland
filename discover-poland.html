@@ -10,12 +10,140 @@
 
 <body>
 
+    <!-- PAGES-HEADER -->
+    <header class="pages-header">
+        <div class="main-header-cover"></div>
+        <div class="main-nav">
+            <!-- PAGES NAV - LOGO  -->
+            <div class="main-nav-logo">
+                <a href="/">
+                    <img src="images/logo_white.png" alt="" width="300px">
+                </a>
+            </div>
+            <!-- PAGES NAV - MENU  -->
+            <nav class="main-nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us.html">About</a></li>
+                    <li><a href="/our-bloggers.html">Bloggers</a></li>
+                    <li><a href="/#cooperation">Cooperation</a></li>
+                    <li><a href="/discover-poland.html">Discover Poland</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- PAGES NAV - HAMBURGER MENU  -->
+            <nav class="main-nav-menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </nav>
+            <div class="main-nav-menu-hamburger-items">
+                <a href="/">Home</a>
+                <a href="/about-us.html">About</a>
+                <a href="/our-bloggers.html">Bloggers</a>
+                <a href="/#cooperation">Cooperation</a>
+                <a href="/discover-poland.html">Discover Poland</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <!-- NAV MAIN-NAV END -->
+    </header>
 
+
+<!-- MAIN GAME SECTIONS -->
+
+    <section class="discover-welcome">
+        <div class="container">
+            <h4>How well do you know Poland<span class="dot">?</span></h4>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <button class="main-btn" id="play-now-btn">Play now</button>
+        </div>
+    </section>
+
+
+    <section class="discover-game">
+        <div class="container">
+            <!-- Instructions -->
+            <div class="row">
+                <h3>To play the game, click on the map... [instrukcje]</h3>
+            </div>
+
+            <!-- City and score -->
+            <div class="row">
+                <div class="col-1-2">
+                    <div class="random-city">
+                        Find the following city:
+                        <div class="result" id="city">
+                            Łódź
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-2">
+                    <div class="your-score">
+                        Your current score:
+                        <div class="result" id="score">
+                            22
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result & next -->
+            <div class="row">
+                <div class="answer">
+                    Your answer was <span id="kilometers">22</span> km away from the city. You scored
+                    <span id="points">22</span> points.
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="row">
+                <div class="google-map" id="map">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- END OF MAIN GAME SECTIONS -->
+
+
+    <!-- FOOTER MAIN-FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-1-2">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us.html">About</a></li>
+                        <li><a href="/our-bloggers.html">Bloggers</a></li>
+                        <li><a href="/#cooperation">Cooperation</a></li>
+                        <li><a href="/discover-poland.html">Discover Poland</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-1-2" id="copyright">
+                    <div class="social-media">
+                        tu będą ikonki social media
+                    </div>
+                    <div>
+                        Created by
+                        <a href="http://maderity.com">Maderity</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
 </body>
 <script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/discover-poland.js"></script>
+<script defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEGq7CypqfWzSsRCzbJPld9sPtAyeEh1g&callback=initMap">
+      </script>
+<script type="text/javascript" src="js/menu.js"></script>
+
 
 </html>
