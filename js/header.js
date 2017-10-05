@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 // CHANGING HELLO WORDS IN HEADER
 
-var words = ["HELLO", "CZEŚĆ", "HOLA", "BONJOUR", "BUNA", "OLÁ", "ПРИВЕТ"];
+var words = ["HELLO", "CZEŚĆ", "HOLA", "BONJOUR", "BUNA", "OLÁ", "ПРИВЕТ", "नमस्ते"];
 
 function changeWord(arr) {
     for (var i=0; i<arr.length; i++) {
@@ -39,7 +39,7 @@ $(window).bind("load", function() {
 
 // CHANGING COUNTRY NAMES IN HEADER
 
-var countries = ["POLAND", "POLSKO", "POLONIA", "POLOGNE", "POLONIA!", "POLÔNIA", "ПОЛЬША"];
+var countries = ["POLAND", "POLSKO", "POLONIA", "POLOGNE", "POLONIA!", "POLÔNIA", "ПОЛЬША", "पोलैंड"];
 
 function changeCountry(arr) {
     for (var i=0; i<arr.length; i++) {
@@ -87,9 +87,7 @@ $("#arrow-down").on("click", function(event) {
 })
 
 
-
-
-
+// FOOTER
 
 
 

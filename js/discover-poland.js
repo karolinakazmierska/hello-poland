@@ -6,9 +6,7 @@ $("#play-now-btn").on("click", function startGame() {
     $(".discover-game").css("display", "block");
     initMap();
 
-    // tu na kliknięcie mogę też ustawić timer, po jakimś czasie pokaże się okno game over, twój score, button play again, i po kliknięciu przeładuje się strona
-
-    myTimer = setInterval(function() {
+    var myTimer = setInterval(function() {
         $("#timer").text(  ( Number($("#timer").text() ) - 1)  )
         if ($("#timer").text() == 0) {
             clearInterval(myTimer);
@@ -21,22 +19,6 @@ $("#play-now-btn").on("click", function startGame() {
 
 
 
-// Randomowe miasta
-function City(name, lat, lng) {
-    this.name = name;
-    this.lat = lat;
-    this.lng = lng;
-}
-var warsaw = new City("Warsaw", 52.229676, 21.012229);
-var lodz = new City("Łódź", 51.759249, 19.455983);
-var wroclaw = new City("Wrocław", 51.107885, 17.038538);
-var poznan = new City("Poznań", 52.406374, 16.925168);
-var gdansk = new City("Gdańsk", 54.352025, 18.646638);
-var krakow = new City("Kraków", 50.06465, 19.94498);
-var bialystok = new City("Białystok", 53.132489, 23.16884);
-var szczecin = new City("Szczecin", 53.428544, 14.552812);
-
-var cities = [warsaw, lodz, wroclaw, poznan, gdansk, krakow, bialystok, szczecin];
 
 // ADDING A MAP
 function initMap() {
@@ -49,10 +31,10 @@ function initMap() {
     map.setOptions({styles: styles['hide']});
 
     // Insert first, random city
-    $("#city").text(cities[Math.round(Math.random() * 7)].name);
+    $("#city").text(cities[Math.round(Math.random() * (cities.length-1))].name);
 
 // ON CLICK
-    map.addListener('click', function(e) {
+    map.addListener("click", function(e) {
         var currentCity = $("#city").text(); // get the current city
         for (var i=0; i<cities.length; i++) {
             if (cities[i].name == currentCity) {
@@ -105,7 +87,7 @@ function initMap() {
 
         setTimeout(function(){
             $("#answer").css("display", "flex");
-        }, 800);
+        }, 300);
 
         // on click
         $("#next-round").on("click", function() {
@@ -114,7 +96,7 @@ function initMap() {
             // hide polyline
             line.setMap(null)
             // randomly choose next city (poprawić wyżej!!!)
-            var randomNumber = Math.round(Math.random() * 7);
+            var randomNumber = Math.round(Math.random() * (cities.length-1));
             $("#city").text(cities[randomNumber].name);
         })
 
@@ -153,6 +135,53 @@ var styles = {
 $("#play-again").on("click", function() {
     location.reload(true);
 })
+
+// Randomowe miasta
+function City(name, lat, lng) {
+    this.name = name;
+    this.lat = lat;
+    this.lng = lng;
+}
+var warsaw = new City("Warsaw", 52.229676, 21.012229);
+var lodz = new City("Łódź", 51.759249, 19.455983);
+var wroclaw = new City("Wrocław", 51.107885, 17.038538);
+var poznan = new City("Poznań", 52.406374, 16.925168);
+var gdansk = new City("Gdańsk", 54.352025, 18.646638);
+var krakow = new City("Kraków", 50.06465, 19.94498);
+var bialystok = new City("Białystok", 53.132489, 23.16884);
+var szczecin = new City("Szczecin", 53.428544, 14.552812);
+var bydgoszcz = new City("Bydgoszcz", 53.12348, 18.008438);
+var torun = new City("Toruń", 53.01379, 18.598444);
+var zakopane = new City("Zakopane", 49.299181, 19.949562);
+var katowice = new City("Katowice", 50.264892, 19.023782);
+var kielce = new City("Kielce", 50.866077, 20.628568);
+var czestochowa = new City("Częstochowa", 50.81182, 19.120309);
+var bielskobiala = new City("Bielsko-Biała", 49.822377, 19.058384);
+var lublin = new City("Lublin", 51.246454, 22.568446);
+var zielonagora = new City("Zielona Góra", 51.935621, 15.506186);
+var legnica = new City("Legnica", 51.207007, 16.155323);
+var opole = new City("Opole", 50.675107, 17.921298);
+var radom = new City("Radom", 51.402724, 21.147133);
+var lomza = new City("Łomża", 53.17812, 22.059032);
+var rzeszow = new City("Rzeszów", 50.041187, 21.99912);
+var olsztyn = new City("Olsztyn", 53.778422, 20.480119);
+var malbork = new City("Malbork", 54.036132, 19.037976);
+var slupsk = new City("Słupsk", 54.464148, 17.028482);
+var zamosc = new City("Zamość", 50.723088, 23.251968);
+var kalisz = new City("Kalisz", 51.76728, 18.085346);
+var nowysacz = new City("Nowy Sącz", 49.617454, 20.715332);
+var mikolajki = new City("Mikołajki", 53.802702, 21.570604);
+var jeleniagora = new City("Jelenia Góra", 50.904417, 15.719326);
+var plock = new City("Płock", 52.546345, 19.706536);
+var wloclawek = new City("Włocławek", 52.64833, 19.067736);
+var swiebodzin = new City("Świebodzin", 52.247296, 15.533572);
+var kolobrzeg = new City("Kołobrzeg", 54.175917, 15.583267);
+var gniezno = new City("Gniezno", 52.534925, 17.582657);
+var suwalki = new City("Suwałki", 54.111522, 22.930788);
+var kutno = new City("Kutno", 52.230618, 19.364278);
+
+
+var cities = [warsaw, lodz, wroclaw, poznan, gdansk, krakow, bialystok, szczecin, bydgoszcz, torun, zakopane, katowice, kielce, czestochowa, bielskobiala, lublin, zielonagora, legnica, opole, radom, lomza, rzeszow, olsztyn, malbork, slupsk, zamosc, kalisz, nowysacz, mikolajki, jeleniagora, plock, wloclawek, swiebodzin, kolobrzeg, gniezno, suwalki, kutno];
 
 
 

@@ -48,7 +48,8 @@ $grey: rgb(54,54,54);
     li {
         display: inline-block;
         transition: 1s all;
-        height: 3em;
+        // height: 3em;
+        padding: 10px 0;
         a {
             text-decoration: none;
             font-size: 20px;
