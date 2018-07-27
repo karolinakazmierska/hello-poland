@@ -105,6 +105,15 @@ $grey: rgb(54,54,54);
             font-weight: bold;
         }
     }
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        a {
+            margin-left: 20px;
+        }
+    }
 
 }
 
@@ -127,6 +136,9 @@ $grey: rgb(54,54,54);
     }
     .answer {
         width: 100%;
+    }
+    .btn-container {
+        flex-direction: column;
     }
 
 }
